@@ -6,7 +6,7 @@ import { Header } from '~/components';
 import { Footer } from '~/components/index.server';
 import { parseMenu } from '~/lib/utils';
 
-import Logo from '~/assets/images/logo-australia-made.svg'
+import { TestImage as TestImageClient } from './TestImage.client';
 
 const HEADER_MENU_HANDLE = 'main-menu';
 const FOOTER_MENU_HANDLE = 'footer';
@@ -25,7 +25,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
             Skip to content
           </a>
         </div>
-        <img src={Logo} width="55" height="48" />
+        <TestImageClient />
         <Suspense fallback={<Header title={SHOP_NAME_FALLBACK} />}>
           <HeaderWithMenu />
         </Suspense>
